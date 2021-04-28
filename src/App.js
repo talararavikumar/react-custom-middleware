@@ -1,10 +1,12 @@
+import { Provider } from "react-redux";
 import "./styles.css";
+import store from "./store/store";
+import PhotoWrapper from "./pages/PhotoContainer.js";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Provider store={store}>
+      <PhotoWrapper />
+    </Provider>
   );
 }

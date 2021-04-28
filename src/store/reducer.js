@@ -1,16 +1,17 @@
 const initialState = {
-  photos:[],
-  loading:false,
-}
+  photos: [],
+  loading: false
+};
 
-export default reducer (state = initialState, action){
-  switch(action.type)
-  {
-    case 'MOVIES_LOADING':
-      return {...state, loading:true}
-    case 'MOVIES_LOADED':
-      return {...state, photos:action.payload}
-    default :
-     return state;
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case "PHOTOS_LOADING":
+      return { ...state, loading: true };
+    case "PHOTOS_LOADED":
+      return { ...state, photos: action.payload };
+    default:
+      return state;
   }
 }
+
+export default reducer;
